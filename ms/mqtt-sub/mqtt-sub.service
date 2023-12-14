@@ -1,0 +1,20 @@
+[Unit]
+# put this file to /etc/systemd/system/mqtt-sub.service
+Description=Listen MQTT broker
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/iot/ms/mqtt-sub
+ExecStart=/opt/iot/.venv/bin/python3 mqtt_sub.py
+Restart=on-failure
+RestartSec=15s
+
+# StandardOutput=syslog
+# StandardError=syslog
+
+SyslogIdentifier=mqtt_sub
+
+[Install]
+WantedBy=multi-user.target

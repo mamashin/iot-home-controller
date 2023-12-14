@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "iot-smart-controller"
+version = "0.1.0"
+description = "IoT Smart Controller"
+authors = ["mamashin <mamashin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4"
+loguru = "^0.6"
+python-decouple = "^3.5"
+djangorestframework = "^3"
+httpx = "^0.23"
+paho-mqtt = "^1.6.1"
+lru-ttl = "^0.0.7"
+asyncio-mqtt = "^0.12.1"
+fastapi = "^0.79.0"
+pymodbus = "^2.5.3"
+pyserial-asyncio = "^0.6"
+aiofile = "^3.7.4"
+django-oauth-toolkit = "^2.1.0"
+django-cors-headers = "^3.13.0"
+redis = "^4.3.4"
+smbus2-asyncio = "^0.0.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

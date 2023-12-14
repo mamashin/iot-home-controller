@@ -1,0 +1,4 @@
+MQTT_HOST=172.16.8.221
+MODBUS_API_URL=http://modbus.lan.dacha.mamashin.org
+MQTT_API_BASE_URL=http://localhost:8000/api
+MQTT_DEBUG=True

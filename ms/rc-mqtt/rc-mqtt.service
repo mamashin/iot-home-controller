@@ -1,0 +1,20 @@
+[Unit]
+# put this file to /etc/systemd/system/rc-mqtt.service
+Description=RF code receive and public to MQTT service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/iot/ms/rc-mqtt
+ExecStart=/opt/iot/.venv/bin/python3 rc_mqtt.py
+Restart=on-failure
+RestartSec=15s
+
+# StandardOutput=syslog
+# StandardError=syslog
+
+SyslogIdentifier=rc_mqtt
+
+[Install]
+WantedBy=multi-user.target
